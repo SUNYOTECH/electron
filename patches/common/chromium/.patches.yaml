@@ -529,3 +529,12 @@ patches:
     majority of changes originally come from these PRs:
       * https://github.com/electron/electron/pull/1835
       * https://github.com/electron/electron/pull/8596
+-
+  author: zcbenz <zcbenz@gmail.com>
+  file: web_preferences.patch
+  description: |
+    Add a node_integration field to WebPreferences so we can determine whether
+    a frame has node integration in renderer process.
+
+    This is required by the nativeWindowOpen option, which put multiple main
+    frames in one renderer process.
